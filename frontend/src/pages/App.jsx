@@ -4,6 +4,7 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import ProtectedRoute from "../components/ProtectedRoute";
 import Unauthenticated from "./Unauthenticated.page";
 import OAuthCallback from "./oauth-callback.page";
+import { getResources as getAndreykaResources } from '../services/AuthService'
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -20,7 +21,8 @@ function App() {
     if (accessToken) {
       setIsAuthenticated(true);
 
-      // const data = await getAn // Get resources, but where can i get it?
+      const data = await getAndreykaResources(accessToken);
+      setResource(data);
     }
 
     setIsLoading(false);
