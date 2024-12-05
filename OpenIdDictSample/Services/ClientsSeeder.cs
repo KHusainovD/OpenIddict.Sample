@@ -30,9 +30,9 @@ public class ClientsSeeder
             DisplayName = "Api scope",
             Name = "api1",
             Resources =
-                {
-                    "resource_server_1"
-                }
+            {
+                "resource_server_1"
+            }
         });
     }
 
@@ -58,25 +58,25 @@ public class ClientsSeeder
             ConsentType = ConsentTypes.Explicit,
             DisplayName = "Swagger client application",
             RedirectUris =
-                {
-                    new Uri("https://localhost:7002/swagger/oauth2-redirect.html")
-                },
+            {
+                new Uri("https://localhost:7002/swagger/oauth2-redirect.html")
+            },
             PostLogoutRedirectUris =
-                {
-                    new Uri("https://localhost:7002/resources")
-                },
+            {
+                new Uri("https://localhost:7002/resources")
+            },
             Permissions =
-                {
-                    Permissions.Endpoints.Authorization,
-                    Permissions.Endpoints.Logout,
-                    Permissions.Endpoints.Token,
-                    Permissions.GrantTypes.AuthorizationCode,
-                    Permissions.ResponseTypes.Code,
-                    Permissions.Scopes.Email,
-                    Permissions.Scopes.Profile,
-                    Permissions.Scopes.Roles,
-                   $"{Permissions.Prefixes.Scope}api1"
-                },
+            {
+                Permissions.Endpoints.Authorization,
+                Permissions.Endpoints.Logout,
+                Permissions.Endpoints.Token,
+                Permissions.GrantTypes.AuthorizationCode,
+                Permissions.ResponseTypes.Code,
+                Permissions.Scopes.Email,
+                Permissions.Scopes.Profile,
+                Permissions.Scopes.Roles,
+               $"{Permissions.Prefixes.Scope}api1"
+            },
             //Requirements =
             //{
             //    Requirements.Features.ProofKeyForCodeExchange
@@ -96,25 +96,25 @@ public class ClientsSeeder
             ConsentType = ConsentTypes.Explicit,
             DisplayName = "React client application",
             RedirectUris =
-                {
-                    new Uri("http://localhost:3000/oauth/callback")
-                },
+            {
+                new Uri("http://localhost:3000/oauth/callback")
+            },
             PostLogoutRedirectUris =
-                {
-                    new Uri("http://localhost:3000/")
-                },
+            {
+                new Uri("http://localhost:3000/")
+            },
             Permissions =
-                {
-                    Permissions.Endpoints.Authorization,
-                    Permissions.Endpoints.Logout,
-                    Permissions.Endpoints.Token,
-                    Permissions.GrantTypes.AuthorizationCode,
-                    Permissions.ResponseTypes.Code,
-                    Permissions.Scopes.Email,
-                    Permissions.Scopes.Profile,
-                    Permissions.Scopes.Roles,
-                   $"{Permissions.Prefixes.Scope}api1"
-                },
+            {
+                Permissions.Endpoints.Authorization,
+                Permissions.Endpoints.Logout,
+                Permissions.Endpoints.Token,
+                Permissions.GrantTypes.AuthorizationCode,
+                Permissions.ResponseTypes.Code,
+                Permissions.Scopes.Email,
+                Permissions.Scopes.Profile,
+                Permissions.Scopes.Roles,
+               $"{Permissions.Prefixes.Scope}api1"
+            },
             //Requirements =
             //{
             //    Requirements.Features.ProofKeyForCodeExchange
