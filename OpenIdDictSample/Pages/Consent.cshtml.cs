@@ -9,7 +9,7 @@ using OpenIdDictSample.Services;
 namespace OpenIdDictSample.Pages;
 
 [Authorize]
-public class Concent : PageModel
+public class Consent : PageModel
 {
     [BindProperty]
     public string? ReturnUrl { get; set; }

@@ -4,7 +4,7 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import ProtectedRoute from "../components/ProtectedRoute";
 import Unauthenticated from "./Unauthenticated.page";
 import OAuthCallback from "./oauth-callback.page";
-import { getResources as getAndreykaResources } from '../services/AuthService'
+import { getResources as getAndreykaResources } from '../services/Api'
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
