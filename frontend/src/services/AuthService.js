@@ -14,6 +14,16 @@ export async function isAuthenticated() {
     return !!token;
 }
 
+export async function handleOAuthCallback(callbackUrl) {
+    try {
+        const user = await userManager.signinRedirectCallback(callbackUrl);
+        return user;
+    } catch(e) {
+        alert(e);
+        console.log(`error while handling oauth callback: ${e}`);
+    }
+}
+
 export async function sendOAuthRequest() {
     return await userManager.signinRedirect();
 }
